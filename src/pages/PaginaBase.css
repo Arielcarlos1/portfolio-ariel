@@ -1,0 +1,45 @@
+.pagina {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pagina h2 {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.pagina p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+
+  span {
+    color: #93cad1;
+  }
+}
+.link-contato {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn-contato {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-bottom: 90px;
+}
+
+
+
+.btn-contato:hover {
+  background-color: #ffffff;
+}
+

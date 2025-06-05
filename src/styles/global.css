@@ -1,0 +1,25 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+a:hover {
+  color: #00bcd4;
+  transition: color 0.3s;
+}
