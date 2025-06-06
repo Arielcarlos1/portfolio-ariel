@@ -1,3 +1,5 @@
+/* Contato CSS - Versão Responsiva */
+
 .contato {
   padding: 60px 20px;
   max-width: 700px;
@@ -50,4 +52,164 @@ button {
 
 button:hover {
   background-color: #0097a7;
+}
+
+/* ======================================
+   RESPONSIVIDADE - MOBILE FIRST
+====================================== */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .contato {
+    padding: 50px 18px;
+    max-width: 650px;
+  }
+  
+  .contato h2 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+  
+  input,
+  textarea {
+    padding: 11px;
+    font-size: 0.95rem;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 150px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contato {
+    padding: 40px 15px;
+    max-width: 100%;
+  }
+  
+  .contato h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    gap: 18px;
+  }
+  
+  input,
+  textarea {
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    /* Área de toque otimizada para mobile */
+    min-height: 44px;
+  }
+  
+  textarea {
+    min-height: 120px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 120px;
+    /* Área de toque otimizada */
+    min-height: 50px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .contato {
+    padding: 30px 12px;
+  }
+  
+  .contato h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+  
+  form {
+    gap: 16px;
+  }
+  
+  input,
+  textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  button {
+    padding: 14px;
+    font-size: 1rem;
+    margin-bottom: 100px;
+  }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 360px) {
+  .contato {
+    padding: 25px 10px;
+  }
+  
+  .contato h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    gap: 14px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  textarea {
+    min-height: 90px;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 80px;
+  }
+}
+
+/* Ajustes específicos para formulários em mobile */
+@media (max-width: 768px) {
+  /* Evitar zoom automático no iOS */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
+  }
+  
+  /* Melhor UX para textarea no mobile */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Efeito visual melhorado no touch */
+  button:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+  }
 }

@@ -1,22 +1,23 @@
+/* Habilidades CSS - Versão Responsiva */
+
 .habilidades {
   padding: 60px 20px;
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
-
-  h2 { color: white;
-    border-radius: 6px;
-    border: #414141 1px solid;
-    
-  }
 }
 
 .habilidades h2 {
+  color: white;
+  border-radius: 6px;
+  border: #414141 1px solid;
   font-size: 2rem;
   margin-bottom: 40px;
-  
   color: #fbfbfb;
+  /* Melhor responsividade para o título */
+  padding: 15px;
+  display: inline-block;
 }
 
 .grid {
@@ -31,6 +32,10 @@
   flex-direction: column;
   align-items: center;
   color: #ffffff;
+  /* Área de toque otimizada */
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .icone svg {
@@ -41,15 +46,13 @@
 
 .icone span {
   font-size: 1rem;
-  
 }
 
 .icone:hover svg {
   transform: scale(1.2);
-  
 }
 
-/* Cores individuais (opcional) */
+/* Cores individuais (mantidas exatamente iguais) */
 .html { color: #e44d26; }
 .css { color: #2965f1; }
 .js { color: #f0db4f; }
@@ -57,3 +60,178 @@
 .react { color: #61dafb; }
 .php { color: #777bb4; }
 .excel { color: #217346; }
+
+/* ======================================
+   RESPONSIVIDADE - MOBILE FIRST
+====================================== */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .habilidades {
+    padding: 50px 18px;
+    max-width: 900px;
+    margin-bottom: 80px;
+  }
+  
+  .habilidades h2 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    padding: 12px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 25px;
+  }
+  
+  .icone svg {
+    font-size: 44px;
+  }
+  
+  .icone span {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .habilidades {
+    padding: 40px 15px;
+    margin-bottom: 60px;
+  }
+  
+  .habilidades h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+  }
+  
+  .icone {
+    padding: 12px;
+    /* Área de toque otimizada para mobile */
+    min-height: 80px;
+    min-width: 80px;
+  }
+  
+  .icone svg {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .icone span {
+    font-size: 0.9rem;
+  }
+  
+  /* Hover melhorado para touch devices */
+  .icone:hover svg {
+    transform: scale(1.15);
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .habilidades {
+    padding: 30px 12px;
+    margin-bottom: 50px;
+  }
+  
+  .habilidades h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding: 8px 12px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 18px;
+  }
+  
+  .icone {
+    padding: 10px;
+    min-height: 75px;
+    min-width: 75px;
+  }
+  
+  .icone svg {
+    font-size: 36px;
+    margin-bottom: 6px;
+  }
+  
+  .icone span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 360px) {
+  .habilidades {
+    padding: 25px 10px;
+    margin-bottom: 40px;
+  }
+  
+  .habilidades h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding: 6px 10px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+  }
+  
+  .icone {
+    padding: 8px;
+    min-height: 70px;
+    min-width: 70px;
+  }
+  
+  .icone svg {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .icone span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Melhorias específicas para touch devices */
+@media (max-width: 768px) {
+  /* Feedback visual para touch */
+  .icone:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+  }
+  
+  .icone:active svg {
+    transform: scale(1.1);
+  }
+  
+  /* Grid mais responsivo para telas pequenas */
+  .grid {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Ajuste para telas muito largas */
+@media (min-width: 1200px) {
+  .habilidades {
+    max-width: 1200px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 35px;
+  }
+  
+  .icone svg {
+    font-size: 52px;
+  }
+}

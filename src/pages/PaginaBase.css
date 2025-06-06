@@ -1,3 +1,5 @@
+/* Página (Sobre) CSS - Versão Responsiva */
+
 .pagina {
   padding: 60px 20px;
   max-width: 900px;
@@ -13,12 +15,12 @@
 .pagina p {
   font-size: 1.1rem;
   line-height: 1.6;
-
-
-  span {
-    color: #93cad1;
-  }
 }
+
+.pagina p span {
+  color: #93cad1;
+}
+
 .link-contato {
   margin-top: 40px;
   text-align: center;
@@ -37,9 +39,235 @@
   margin-bottom: 90px;
 }
 
-
-
 .btn-contato:hover {
   background-color: #ffffff;
 }
 
+/* ======================================
+   RESPONSIVIDADE - MOBILE FIRST
+====================================== */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .pagina {
+    padding: 50px 18px;
+    max-width: 800px;
+  }
+  
+  .pagina h2 {
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+  }
+  
+  .pagina p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
+  .link-contato {
+    margin-top: 35px;
+  }
+  
+  .btn-contato {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-bottom: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pagina {
+    padding: 40px 15px;
+    max-width: 100%;
+  }
+  
+  .pagina h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .pagina p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .link-contato {
+    margin-top: 30px;
+  }
+  
+  .btn-contato {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    /* Área de toque otimizada */
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .pagina {
+    padding: 30px 12px;
+  }
+  
+  .pagina h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .pagina p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  
+  .link-contato {
+    margin-top: 25px;
+  }
+  
+  .btn-contato {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 360px) {
+  .pagina {
+    padding: 25px 10px;
+  }
+  
+  .pagina h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .pagina p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .link-contato {
+    margin-top: 20px;
+  }
+  
+  .btn-contato {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Melhorias específicas para mobile */
+@media (max-width: 768px) {
+  /* Feedback visual para touch */
+  .btn-contato:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
+  
+  /* Melhor legibilidade */
+  .pagina p {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Destaque do span em mobile */
+  .pagina p span {
+    font-weight: 500;
+  }
+  
+  /* Espaçamento entre parágrafos otimizado */
+  .pagina p + p {
+    margin-top: 15px;
+  }
+}
+
+/* Ajustes para telas muito largas */
+@media (min-width: 1200px) {
+  .pagina {
+    max-width: 1000px;
+    padding: 70px 20px;
+  }
+  
+  .pagina h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .pagina p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .link-contato {
+    margin-top: 50px;
+  }
+  
+  .btn-contato {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    margin-bottom: 100px;
+  }
+}
+
+/* Orientação landscape em mobile */
+@media (max-width: 768px) and (orientation: landscape) and (max-height: 500px) {
+  .pagina {
+    padding: 20px 15px;
+  }
+  
+  .pagina h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .pagina p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  
+  .link-contato {
+    margin-top: 15px;
+  }
+  
+  .btn-contato {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .btn-contato {
+    transition: none;
+  }
+  
+  .btn-contato:hover {
+    transition: none;
+  }
+}
+
+/* Melhor contrast para leitura */
+@media (prefers-contrast: high) {
+  .pagina p span {
+    color: #00bcd4;
+    font-weight: bold;
+  }
+}
